@@ -63,6 +63,7 @@ console.log(FindSecondLargest([2345, 5332, 234, 234, 123143, 4]));
 
 
 
+console.log("************* Remove Duplicates from Array *************");
 function removeDuplicate(arr) {
     let unique = [];
 
@@ -76,6 +77,8 @@ function removeDuplicate(arr) {
 console.log(removeDuplicate([1, 2, 5, 3, 6, 4, 5, 6, 22, 1, 1, 1, 22]));
 
 
+
+console.log("************* Remove Duplicates (Second Function) *************");
 function removeDuplicate2(arr) {
     let unique = [];
 
@@ -92,6 +95,7 @@ console.log(removeDuplicate([1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 
 
 
 
+console.log("************* Reverse Array *************");
 function reverseArr(arr) {
 
     let rev = [];
@@ -106,6 +110,7 @@ console.log(reverseArr([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
 
 
+console.log("************* Sum of Array Elements *************");
 function FindSumOfArray(arr) {
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -119,6 +124,7 @@ console.log(FindSumOfArray([2, 2]));
 
 
 
+console.log("************* Separate Odd and Even Numbers *************");
 function OddOREven(arr) {
     let odd = [];
     let even = []
@@ -135,6 +141,7 @@ console.log(OddOREven([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
 
 
 
+console.log("************* Move Zeros to End *************");
 function ZeroAtEnd(arr) {
     let result = [];
     let zeros = [];
@@ -152,6 +159,7 @@ console.log(ZeroAtEnd([0, 1, 0, 2, 0, 3, 0, 4, 0, 5]));
 
 
 
+console.log("************* Move Negative Numbers to Start *************");
 function negativeNumbersToStart(arr) {
     let positive = [];
     let negative = [];
@@ -170,6 +178,7 @@ console.log(negativeNumbersToStart([1, 2, 3, 4, 5, -5, -4, -3, -2, -1]));
 
 
 
+console.log("************* Move Even Numbers to Start *************");
 function evenNumbersToStart(arr) {
 
     let even = [];
@@ -189,6 +198,7 @@ console.log(evenNumbersToStart([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
 
 
+console.log("************* Find Missing Number (1 to N) *************");
 function findMissing(arr, N){
     let total = (N * (N + 1)) / 2;
 
@@ -201,23 +211,3 @@ function findMissing(arr, N){
 }
 
 console.log(findMissing([1,2,3,5], 5));
-
-
-
-
-
-
-function findMissing(arr, N){
-    let total = (N * (N + 1)) / 2;
-
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++){
-        sum += arr[i];
-    }
-
-    return total - sum;
-}
-
-console.log(findMissing([1,2,3,5], 5));
-
-
