@@ -184,3 +184,35 @@ function FindSumOfArray(arr) {
 }
 console.log(FindSumOfArray([2, 2]));
 
+
+
+function checkPrimeNum(n) {
+    if (n <= 1) return n + " is not a prime number";
+
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+            return n + " is not a prime number";
+        }
+    }
+    return n + " is a prime number";
+}
+
+console.log(checkPrimeNum(7));   
+console.log(checkPrimeNum(10)); 
+console.log(checkPrimeNum(1));   
+console.log(checkPrimeNum(13)); 
+
+
+
+
+function findGCD(a,b){
+    let gcd = 1;
+
+    for( let i = 1; i <= Math.min(a,b) ; i++){
+        if(a % i ===0 && b % i ===0){
+            gcd = i
+        }
+    }
+    return gcd
+}
+console.log(findGCD(48, 18));
