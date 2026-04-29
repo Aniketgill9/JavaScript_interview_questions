@@ -152,3 +152,91 @@ console.log(isAnagrams("asd", "dsa")); // true
 
 
 
+// 9
+console.log("************Count duplicate characters in string*************");
+
+function countDuplicate(str){
+    let count = {};
+    let result ={};
+    
+    for( let char of str){
+        count[char] = (count[char] || 0)+1
+    }
+
+    for( let key in count){
+        if(count[key]>1){
+            result[key]= count[key];
+        }
+    }
+    return result
+    
+}
+console.log(countDuplicate("aanniikkeett"));
+
+// same
+function countDuplicate(str){
+    let count ={};
+    let result ={};
+
+    for( let char of str){
+        count[char] = ( count[char] || 0)+1
+    }
+    for( let key in count){
+        if(count[key]>0){
+            result[key]= count[key]
+        }
+    }
+    return result
+    
+}
+console.log(countDuplicate("aanniikkeett"));
+
+
+
+// 10
+console.log("*********Convert string to uppercase (without built-in)******************");
+
+function toUpperCase(str) {
+    let result = "";
+
+    for (let char of str) {
+        let code = char.charCodeAt(0);
+
+   
+        if (code >= 97 && code <= 122) {
+            result += String.fromCharCode(code - 32);
+        } else {
+            result += char;
+        }
+    }
+
+    return result;
+}
+
+console.log(toUpperCase("aniket"));
+
+
+// 11
+console.log("**************Count number of words in a string*************")
+
+function countNum(str){
+    let  count = 0;
+    let inWord =false;
+
+    for ( let char of str){
+        if ( char !== " " && !inWord){
+            count ++
+            inWord = true
+        }else if( char === " "){
+            inWord = false
+        }
+    }
+    return count
+    
+}
+console.log(countNum("aniket is"));
+
+
+
+// 12
+console.log("**************Capitalize first letter of each word**********************");
